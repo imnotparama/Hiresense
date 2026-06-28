@@ -1,0 +1,52 @@
+# Redrob Hackathon — Submission Metadata
+#
+# Filled in for HireSense ranking submission.
+
+team_name: "HireSense Team"
+
+primary_contact:
+  name: "Lead ML Engineer"
+  email: "team@hiresense.com"
+  phone: "+91-9999999999"
+
+team_members:
+  - name: "Lead ML Engineer"
+    email: "team@hiresense.com"
+    role: "Team Lead"
+
+github_repo: "https://github.com/hunte/HireSense"
+
+sandbox_link: "https://huggingface.co/spaces/hunte/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ../candidates.jsonl --out output/submission.csv"
+
+compute:
+  platform: "Local PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.0"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Gemini"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Gemini for architectural design, troubleshooting, and code quality review.
+  No candidate data was shared with any external models.
+
+methodology_summary: |
+  A memory-efficient rule-based candidate ranker that streams profiles sequentially.
+  Evaluates 6 stages of scoring including expert skills, career trajectory, location/education tiers,
+  and behavioral activity metrics combined with multiplicative hard disqualifiers. Runs on 100K in under 30 seconds.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

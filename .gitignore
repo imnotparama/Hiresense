@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.agents/
+*.patch
+*.txt
+!README.md
+output/*.csv
+candidates.jsonl
+candidates.jsonl.gz
